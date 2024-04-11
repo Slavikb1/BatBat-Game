@@ -4,8 +4,6 @@
 ![Java CI with Maven](https://github.com/tonikolaba/BatBat-Game/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/629a20e6443d40018cf4a511eecc981f)](https://www.codacy.com/gh/tonikolaba/BatBat-Game/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tonikolaba/BatBat-Game&amp;utm_campaign=Badge_Grade)
 [![Build status](https://ci.appveyor.com/api/projects/status/ymeg6gqistui6ttc?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=al.artofsoul.batbatgame%3ABatBat-Game&metric=alert_status)](https://sonarcloud.io/dashboard?id=al.artofsoul.batbatgame%3ABatBat-Game)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RHVZBCA4W9XD6&source=url)
 ----------
 
 
@@ -55,19 +53,4 @@ Simply!
 | JUnit 5 |  5.5.2 | :heavy_check_mark: 
 | :warning: ... | :question: :exclamation: | :mag: :wink: |
 
-
-Become :battery: :clap:
-----------------------
-[![Goriar](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/Goriar)
-[![Fahaba](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/Fahaba)
-[![Hedgedoge21490](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/Hedgedoge21490)
-[![OSUCS362](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/OSUCS362)
-[![Han Jiang](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/HanJiang915/)
-[![vellanka](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/vellanka)
-[![baixi-cs](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/baixi-cs)
-[![Joelle Perez](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/JLionPerez)
-
-### Author  
-![Alt text](https://github.com/tonikolaba/download/blob/master/info/artofsoullogoNewVOG.png)
-
-*:octocat: with :heart: by* **[tonikolaba](https://github.com/tonikolaba)** *:copyright:*
+[![Bar](https://github.com/tonikolaba/download/blob/master/info/BeBatBat.png)](https://github.com/BarMinz)
