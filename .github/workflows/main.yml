@@ -18,7 +18,7 @@ jobs:
           pom-file: 'pom.xml'
 
       - name: Save Version
-        run: echo "VERSION=$(grep version pom.xml | grep -v -e '<?xml|~'| head -n 2 | tail -n 1 | sed 's/[[:space:]]//g' | sed -E 's/<.{0,1}version>//g' | awk '{print $1}')" >> $GITHUB_ENV
+        run: echo "VERSION=$(grep version pom.xml | grep -v -e '<?xml|~'| head -n 3 | tail -n 1 | sed 's/[[:space:]]//g' | sed -E 's/<.{0,1}version>//g' | awk '{print $1}')" >> $GITHUB_ENV
 
       - name: Build the Docker image
         run: docker build --build-arg VERSION=$VERSION -t barminz/batbat:${{ env.VERSION }} .
