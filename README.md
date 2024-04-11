@@ -1,7 +1,6 @@
 [![Bat Bat Game](https://github.com/tonikolaba/download/blob/master/info/headerOK.png)](https://github.com/tonikolaba/download/blob/master/info/headerOK.png)
 ===================
 
-![Java CI with Maven](https://github.com/tonikolaba/BatBat-Game/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/629a20e6443d40018cf4a511eecc981f)](https://www.codacy.com/gh/tonikolaba/BatBat-Game/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tonikolaba/BatBat-Game&amp;utm_campaign=Badge_Grade)
 [![Build status](https://ci.appveyor.com/api/projects/status/ymeg6gqistui6ttc?svg=true)](https://ci.appveyor.com/project/tonikolaba/batbat-game)
 ----------
