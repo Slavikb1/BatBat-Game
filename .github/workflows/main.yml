@@ -38,6 +38,7 @@ jobs:
         with:
            name: Depcheck report
            path: ${{github.workspace}}/reports
+      - run: ls -a
 
   
       # - name: Bump Version
