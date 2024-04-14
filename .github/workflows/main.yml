@@ -6,12 +6,12 @@ on: [push]
 #   version: ${{ github.run_number }}
         
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  # build:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - run: echo "repo fetched"
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - run: echo "repo fetched"
       # - run: ls -a
 
   depchecktest:
@@ -19,7 +19,7 @@ jobs:
     name: depecheck_test
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build project with Maven
         run: mvn clean install
       - name: Depcheck
