@@ -1,15 +1,59 @@
-name: Github Actions
+name: GitHub Actions Project
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 
-on:
-  push:
-    branches: [ "master" ]
-
-jobs:
-  scan:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+# env:
+#   version: ${{ github.run_number }}
         
-      - name: Run Snyk to check for vulnerabilities
-      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "repo fetched"
+      - run: ls -a
+  
+      # - name: Bump Version
+      #   run: mvn versions:set -DnewVersion=1.0.$version
+        
+
+#      - name: Build image
+#        run: docker build -t mavenproj .
+
+  #     - name: Login to Docker Hub
+  #       uses: docker/login-action@v3
+  #       with:
+  #         username: ${{ secrets.DOCKER_USER }}
+  #         password: ${{ secrets.DOCKER_PASS }}
+
+  #     - name: Build and push Docker image
+  #       uses: docker/build-push-action@v5
+  #       with:
+  #         context: .
+  #         file: ./Dockerfile
+  #         build-args: VERSION=${{ env.version }}
+  #         push: true
+  #         tags: ${{ secrets.DOCKER_USER }}/maven_project:${{ env.version }} , ${{ secrets.DOCKER_USER }}/maven_project:latest
+
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@v3
+
+  #     - name: Configure AWS Credentials
+  #       uses: aws-actions/configure-aws-credentials@v4
+  #       with:
+  #         aws-access-key-id: ${{ secrets.AWS_USER }}
+  #         aws-secret-access-key: ${{ secrets.AWS_PASS }}
+  #         aws-region: eu-central-1
+
+  #     - name: Terraform init and apply
+  #       run: |
+  #         cd terraform
+  #         terraform init
+  #         terraform fmt
+  #         terraform destroy -auto-approve
+  #         terraform apply -auto-approve
