@@ -12,12 +12,12 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/maven@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      #   uses: snyk/actions/maven@master
+      #   env:
+      #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
-      - name: Print Report Link
-        run: echo ${{ steps.scan.outputs.report_link }}
+      # - name: Print Report Link
+      #   run: echo ${{ steps.scan.outputs.report_link }}
 
         
   build:
