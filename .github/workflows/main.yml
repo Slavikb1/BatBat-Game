@@ -33,6 +33,7 @@ jobs:
 
       - name: Print Report Link
         run: echo ${{ steps.scan.outputs.report_link }}
+
         
   build:
     runs-on: ubuntu-latest
