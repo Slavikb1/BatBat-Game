@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo "repo fetched"
-      - run: ls -a
+      # - run: ls -a
   
       # - name: Bump Version
       #   run: mvn versions:set -DnewVersion=1.0.$version
