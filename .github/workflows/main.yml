@@ -2,8 +2,8 @@ name: GitHub Actions Project
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
-# env:
-#   version: ${{ github.run_number }}
+env:
+  version: ${{ github.run_number }}
         
 jobs:
   # build:
