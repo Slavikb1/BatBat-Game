@@ -40,10 +40,11 @@ jobs:
            path: ${{github.workspace}}/reports
       - run: ls -a
 
-  docker-scan:
-    Dockerfile_scan:
-      runs-on: ubuntu-latest
-      steps:
+
+  Dockerfile_scan:
+        needs: depchecktest
+        runs-on: ubuntu-latest
+        steps:
         - name: Checkout Repo
           uses: actions/checkout@v3
         
