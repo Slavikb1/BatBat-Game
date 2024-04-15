@@ -61,6 +61,18 @@ jobs:
             framework: dockerfile 
 
 
+  codacy-analysis-cli:
+    needs: Dockerfile_scan
+    name: Codacy Analysis CLI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
+
+        
           
       # - name: Bump Version
       #   run: mvn versions:set -DnewVersion=1.0.$version
