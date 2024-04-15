@@ -10,5 +10,8 @@ USER batbatuser
 
 ARG VERSION
 ENV APP="batbatgame.jar"
+
+HEALTHCHECK CMD java -jar $APP
+
 COPY --from=maven /target/batbatgame.jar .
 CMD java -jar $APP
