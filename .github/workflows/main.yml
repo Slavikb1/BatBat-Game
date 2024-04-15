@@ -62,7 +62,7 @@ jobs:
 
 
   codacy-analysis-cli:
-    # needs: Dockerfile_scan
+    needs: depchecktest
     name: Codacy Analysis CLI
     runs-on: ubuntu-latest
     steps:
