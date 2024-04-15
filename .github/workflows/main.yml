@@ -78,8 +78,8 @@ jobs:
     name: Docker image build
     runs-on: ubuntu-latest
     steps:
-      - name: Build image
-        run: docker build -t mavenproj .
+      # - name: Build image
+      #   run: docker build -t batbat .
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
@@ -94,7 +94,7 @@ jobs:
           file: ./Dockerfile
           build-args: VERSION=${{ env.version }}
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/maven_project:${{ env.version }} , ${{ secrets.DOCKER_USER }}/maven_project:latest
+          tags: ${{ secrets.DOCKER_USER }}/batbat_project:${{ env.version }} , ${{ secrets.DOCKER_USER }}/batbat_project:latest
 
   # deploy:
   #   needs: build
