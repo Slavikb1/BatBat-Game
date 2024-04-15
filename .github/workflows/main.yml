@@ -38,7 +38,7 @@ jobs:
         with:
            name: Depcheck report
            path: ${{github.workspace}}/reports
-      - run: ls -a
+
 
 
 
@@ -72,7 +72,7 @@ jobs:
 
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
-      - run: ls -a
+
 
         
   build:
@@ -80,6 +80,7 @@ jobs:
     name: Docker image build
     runs-on: ubuntu-latest
     steps:
+      - run: ls -a
       # - name: Build image
       #   run: docker build -t batbat .
 
@@ -93,7 +94,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile
+          file: Dockerfile
           build-args: VERSION=${{ env.version }}
           push: true
           tags: ${{ secrets.DOCKER_USER }}/batbat_project:${{ env.version }} , ${{ secrets.DOCKER_USER }}/batbat_project:latest
