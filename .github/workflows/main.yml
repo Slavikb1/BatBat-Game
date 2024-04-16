@@ -113,6 +113,15 @@ jobs:
           cosign sign --key cosign.key slavikb/batbat_project:latest -y
 
 
+      - name: Write signing key to disk
+        shell: bash
+        env:
+          KEY: ${{ secrets.COSIGN_PUBLIC_KEY }}
+    
+      - name: Verify Image
+        run: |
+          cosign verify --key cosign.key slavikb/batbat_project:$version
+          cosign verify --key cosign.key slavikb/batbat_project:latest
 
   # deploy:
   #   needs: build
