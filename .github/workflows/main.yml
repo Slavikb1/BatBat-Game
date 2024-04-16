@@ -39,26 +39,6 @@ jobs:
            name: Depcheck report
            path: ${{github.workspace}}/reports
 
-      - name: Install Cosign
-        uses: sigstore/cosign-installer@v3.5.0
-          
-      - name: Write signing key to disk
-        run: 'echo "$KEY" > cosign.key'
-        shell: bash
-        env:
-          KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
-            
-      - name: Sign the published Docker image
-        env:
-          COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
-        run: |
-          cosign sign --key cosign.key slavikb/batbat_project:$version -y
-          cosign sign --key cosign.key slavikb/batbat_project:latest -y
-
-
-
-
-
   # Dockerfile_scan:
   #       needs: depchecktest
   #       runs-on: ubuntu-latest
@@ -115,6 +95,24 @@ jobs:
           build-args: VERSION=${{ env.version }}
           push: true
           tags: ${{ secrets.DOCKER_USER }}/batbat_project:${{ env.version }} , ${{ secrets.DOCKER_USER }}/batbat_project:latest
+
+      - name: Install Cosign
+        uses: sigstore/cosign-installer@v3.5.0
+          
+      - name: Write signing key to disk
+        run: 'echo "$KEY" > cosign.key'
+        shell: bash
+        env:
+          KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
+            
+      - name: Sign the published Docker image
+        env:
+          COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
+        run: |
+          cosign sign --key cosign.key slavikb/batbat_project:$version -y
+          cosign sign --key cosign.key slavikb/batbat_project:latest -y
+
+
 
   # deploy:
   #   needs: build
